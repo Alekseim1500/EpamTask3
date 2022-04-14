@@ -7,7 +7,7 @@ public class Periodical {
     private String identity;
     private String title;
     private String type;
-    private Monthly monthly;
+    private boolean monthly;
     private Set<Chars> characteristics = new LinkedHashSet<Chars>();
 
 
@@ -35,11 +35,11 @@ public class Periodical {
         this.type = type;
     }
 
-    public Monthly getMonthly() {
+    public boolean getMonthly() {
         return monthly;
     }
 
-    public void setMonthly(Monthly monthly) {
+    public void setMonthly(boolean monthly) {
         this.monthly = monthly;
     }
 

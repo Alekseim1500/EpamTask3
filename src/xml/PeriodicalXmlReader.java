@@ -34,8 +34,7 @@ public class PeriodicalXmlReader {
                         } else if ("title".equals(tagName)) {
                             periodical.setTitle(reader.getElementText());
                         } else if ("monthly".equals(tagName)) {
-                            Monthly monthly = new Monthly();
-                            monthly.setMonthly(Boolean.parseBoolean(reader.getElementText()));
+                            periodical.setMonthly(Boolean.parseBoolean(reader.getElementText()));
                         } else if ("color".equals(tagName)) {
                             Color color = new Color();
                             color.setElement(tagName);

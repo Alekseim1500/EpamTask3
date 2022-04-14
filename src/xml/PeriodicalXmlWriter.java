@@ -32,7 +32,7 @@ public class PeriodicalXmlWriter {
                 writer.writeCharacters(periodical.getType());
                 writer.writeEndElement();
                 writer.writeStartElement("monthly");
-                writer.writeCharacters(periodical.getMonthly().toString());
+                writer.writeCharacters(String.valueOf(periodical.getMonthly()));
                 writer.writeEndElement();
 
                 writer.writeStartElement("Chars");
