@@ -1,1 +1,36 @@
-<?xml version="1.0" encoding="UTF-8"?><periodicals xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.example.org/periodicals" xsi:schemaLocation="http://www.example.org/periodicals periodicals.xsd"><periodical id="a&amp;1"><title>Новая Нива</title><type></type><monthly>true</monthly><Chars><color>false</color><volume>5</volume><glossy>false</glossy><subscriptionIndex>true</subscriptionIndex></Chars></periodical><periodical id="a&amp;2"><title>Новая Мода</title><type></type><monthly>false</monthly><Chars><color>true</color><volume>20</volume><glossy>true</glossy><subscriptionIndex>false</subscriptionIndex></Chars></periodical><periodical id="a&amp;3"><title>Италия</title><type></type><monthly>false</monthly><Chars><color>true</color><volume>20</volume><glossy>true</glossy></Chars></periodical></periodicals>
+<?xml version="1.0" encoding="UTF-8"?>
+<periodicals xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.example.org/periodicals"
+             xsi:schemaLocation="http://www.example.org/periodicals periodicals.xsd">
+    <periodical id="a&amp;1">
+        <title>Новая Нива</title>
+        <type>newspaper</type>
+        <monthly>true</monthly>
+        <Chars>
+            <color>false</color>
+            <volume>5</volume>
+            <glossy>false</glossy>
+            <subscriptionIndex>true</subscriptionIndex>
+        </Chars>
+    </periodical>
+    <periodical id="a&amp;2">
+        <title>Новая Мода</title>
+        <type>magazine</type>
+        <monthly>false</monthly>
+        <Chars>
+            <color>true</color>
+            <volume>20</volume>
+            <glossy>true</glossy>
+            <subscriptionIndex>false</subscriptionIndex>
+        </Chars>
+    </periodical>
+    <periodical id="a&amp;3">
+        <title>Италия</title>
+        <type>booklet</type>
+        <monthly>false</monthly>
+        <Chars>
+            <color>true</color>
+            <volume>20</volume>
+            <glossy>true</glossy>
+        </Chars>
+    </periodical>
+</periodicals>

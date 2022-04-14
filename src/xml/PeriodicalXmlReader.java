@@ -29,8 +29,7 @@ public class PeriodicalXmlReader {
                             periodical = new Periodical();
                             periodical.setIdentity(reader.getAttributeValue(null, "id"));
                         } else if ("type".equals(tagName)) {
-                            Type type = new Type();
-                            type.setName(reader.getElementText());
+                            periodical.setType(reader.getElementText());
                         } else if ("title".equals(tagName)) {
                             periodical.setTitle(reader.getElementText());
                         } else if ("monthly".equals(tagName)) {

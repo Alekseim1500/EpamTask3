@@ -1,6 +1,6 @@
 package domain;
 
-public class SubscriptionIndex extends Chars{
+public class SubscriptionIndex extends Chars {
     public SubscriptionIndex() {
         super("Имеет почтовый индекс");
     }
