@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<element name="periodicals">
+		<complexType>
+			<sequence>
+				<element name="periodical" maxOccurs="unbounded">
+					<complexType>
+						<sequence>
+							<element name="title" type="string" />
+							<element name="type">
+								<simpleType>
+									<restriction base="string">
+										<enumeration value="newspaper" />
+										<enumeration value="magazine" />
+										<enumeration value="booklet" />
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="monthly" type="boolean" />
+							<element name="chars">
+								<complexType>
+									<sequence>
+										<element name="color" type="boolean" />
+										<element name="volume" type="positiveInteger" />
+										<element name="glossy" type="boolean" />
+										<element name="subscriptionIndex" type="boolean" minOccurs="0"/>
+									</sequence>
+								</complexType>
+							</element>
+						</sequence>
+						<attribute name="id" type="string" use="required" />
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

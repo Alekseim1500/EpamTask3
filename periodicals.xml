@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<periodicals xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="periodicals.xsd">
+	<periodical id="a&amp;1">
+		<title>Новая Нива</title>
+		<type>newspaper</type>
+		<monthly>true</monthly>
+		<chars>
+			<color>false</color>
+			<volume>5</volume>
+			<glossy>false</glossy>
+			<subscriptionIndex>true</subscriptionIndex>
+		</chars>
+	</periodical>
+
+	<periodical id="a&amp;2">
+		<title>Новая Мода</title>
+		<type>magazine</type>
+		<monthly>false</monthly>
+		<chars>
+			<color>true</color>
+			<volume>20</volume>
+			<glossy>true</glossy>
+			<subscriptionIndex>false</subscriptionIndex>
+		</chars>
+	</periodical>
+
+	<periodical id="a&amp;3">
+		<title>Италия</title>
+		<type>booklet</type>
+		<monthly>false</monthly>
+		<chars>
+			<color>true</color>
+			<volume>20</volume>
+			<glossy>true</glossy>
+		</chars>
+	</periodical>
+</periodicals>
