@@ -5,15 +5,15 @@ public class Color extends Chars {
         super("Цветной");
     }
 
-    private Boolean is;
+    private Boolean isColor;
 
     @Override
     public void setValue(String value) {
-        is = Boolean.parseBoolean(value);
+        isColor = Boolean.parseBoolean(value);
     }
 
     @Override
     public String getValue() {
-        return String.valueOf(is);
+        return String.valueOf(isColor);
     }
 }

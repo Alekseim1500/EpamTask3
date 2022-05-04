@@ -45,7 +45,7 @@ public class PeriodicalXmlValidator extends DefaultHandler {
 
     @Override
     public void fatalError(SAXParseException e) throws SAXException {
-        error.append("FATALERROR: ");
+        error.append("FATAL_ERROR: ");
         error.append(getErrorInfo(e));
     }
 

@@ -1,5 +1,3 @@
-package xml;
-
 import java.io.IOException;
 import java.util.Collections;
 import java.util.Comparator;
@@ -8,6 +6,9 @@ import java.util.List;
 import javax.xml.stream.XMLStreamException;
 
 import domain.Periodical;
+import xml.PeriodicalXmlReader;
+import xml.PeriodicalXmlValidator;
+import xml.PeriodicalXmlWriter;
 
 public class Main {
     public static void main(String[] args) throws IOException, XMLStreamException {

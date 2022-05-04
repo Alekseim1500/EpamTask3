@@ -10,7 +10,6 @@ public class Periodical {
     private boolean monthly;
     private Set<Chars> characteristics = new LinkedHashSet<Chars>();
 
-
     public String getIdentity() {
         return identity;
     }

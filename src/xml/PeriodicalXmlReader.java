@@ -10,7 +10,11 @@ import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 
-import domain.*;
+import domain.Color;
+import domain.Glossy;
+import domain.Periodical;
+import domain.Volume;
+import domain.SubscriptionIndex;
 
 public class PeriodicalXmlReader {
     public List<Periodical> read(String fileName) throws FileNotFoundException {
@@ -25,35 +29,72 @@ public class PeriodicalXmlReader {
                 switch (read) {
                     case XMLStreamConstants.START_ELEMENT: {
                         String tagName = reader.getLocalName();
-                        if ("periodical".equals(tagName)) {
-                            periodical = new Periodical();
-                            periodical.setIdentity(reader.getAttributeValue(null, "id"));
-                        } else if ("type".equals(tagName)) {
-                            periodical.setType(reader.getElementText());
-                        } else if ("title".equals(tagName)) {
-                            periodical.setTitle(reader.getElementText());
-                        } else if ("monthly".equals(tagName)) {
-                            periodical.setMonthly(Boolean.parseBoolean(reader.getElementText()));
-                        } else if ("color".equals(tagName)) {
-                            Color color = new Color();
-                            color.setElement(tagName);
-                            color.setValue(reader.getElementText());
-                            periodical.getCharacteristics().add(color);
-                        } else if ("volume".equals(tagName)) {
-                            Volume volume = new Volume();
-                            volume.setElement(tagName);
-                            volume.setValue(reader.getElementText());
-                            periodical.getCharacteristics().add(volume);
-                        } else if ("glossy".equals(tagName)) {
-                            Glossy glossy = new Glossy();
-                            glossy.setElement(tagName);
-                            glossy.setValue(reader.getElementText());
-                            periodical.getCharacteristics().add(glossy);
-                        } else if ("subscriptionIndex".equals(tagName)) {
-                            SubscriptionIndex subscriptionIndex = new SubscriptionIndex();
-                            subscriptionIndex.setElement(tagName);
-                            subscriptionIndex.setValue(reader.getElementText());
-                            periodical.getCharacteristics().add(subscriptionIndex);
+                        switch (tagName){
+                            case "periodical":
+                                periodical = new Periodical();
+                                periodical.setIdentity(reader.getAttributeValue(null, "id"));
+                                break;
+                            case "type":
+                                try {
+                                    periodical.setType(reader.getElementText());
+                                }catch (NullPointerException e){
+                                    e.printStackTrace();
+                                }
+                                break;
+                            case "title":
+                                try {
+                                    periodical.setTitle(reader.getElementText());
+                                }catch (NullPointerException e){
+                                    e.printStackTrace();
+                                }
+                                break;
+                            case "monthly":
+                                try{
+                                    periodical.setMonthly(Boolean.parseBoolean(reader.getElementText()));
+                                }catch (NullPointerException e){
+                                    e.printStackTrace();
+                                }
+                                break;
+                            case "color":
+                                try{
+                                    Color color = new Color();
+                                    color.setElement(tagName);
+                                    color.setValue(reader.getElementText());
+                                    periodical.getCharacteristics().add(color);
+                                }catch (NullPointerException e){
+                                    e.printStackTrace();
+                                }
+                                break;
+                            case "volume":
+                                try {
+                                    Volume volume = new Volume();
+                                    volume.setElement(tagName);
+                                    volume.setValue(reader.getElementText());
+                                    periodical.getCharacteristics().add(volume);
+                                }catch (NullPointerException e){
+                                    e.printStackTrace();
+                                }
+                                break;
+                            case "glossy":
+                                try {
+                                    Glossy glossy = new Glossy();
+                                    glossy.setElement(tagName);
+                                    glossy.setValue(reader.getElementText());
+                                    periodical.getCharacteristics().add(glossy);
+                                }catch (NullPointerException e){
+                                    e.printStackTrace();
+                                }
+                                break;
+                            case "subscriptionIndex":
+                                try {
+                                    SubscriptionIndex subscriptionIndex = new SubscriptionIndex();
+                                    subscriptionIndex.setElement(tagName);
+                                    subscriptionIndex.setValue(reader.getElementText());
+                                    periodical.getCharacteristics().add(subscriptionIndex);
+                                }catch (NullPointerException e){
+                                    e.printStackTrace();
+                                }
+                                break;
                         }
                         break;
                     }
@@ -73,6 +114,7 @@ public class PeriodicalXmlReader {
             try {
                 reader.close();
             } catch (Exception e) {
+                e.printStackTrace();
             }
         }
     }

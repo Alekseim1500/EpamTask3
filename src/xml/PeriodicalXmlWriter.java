@@ -20,8 +20,7 @@ public class PeriodicalXmlWriter {
             writer.writeStartDocument("UTF-8", "1.0");
             writer.writeStartElement("periodicals");
             writer.writeAttribute("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance");
-            writer.writeAttribute("xmlns", "http://www.example.org/periodicals");
-            writer.writeAttribute("xsi:schemaLocation", "http://www.example.org/periodicals periodicals.xsd");
+            writer.writeAttribute("xsi:schemaLocation", "periodicals.xsd");
             for (Periodical periodical : periodicals) {
                 writer.writeStartElement("periodical");
                 writer.writeAttribute("id", periodical.getIdentity());
